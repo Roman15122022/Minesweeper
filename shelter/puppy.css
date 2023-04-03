@@ -118,11 +118,14 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
+
 }
 .puppy__item{
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: -32px;
+    margin-top: 50px;
+    margin-right: 0px;
     width: 25%;
     background-color: #fff;
 }
@@ -214,6 +217,7 @@ header{
     border: 2px solid #F1CDB3;;
 }
 .nav2{
+    margin-top: 92px;
     display: flex;
     justify-content: center;
 }
@@ -286,4 +290,136 @@ footer{
     top: 11%;
 
     background: url("img/footer-puppy.png");
+}
+@media(max-width: 768px) {
+    .header__logo{
+        justify-content: start;
+    }
+    .header__nav{
+        justify-content: center;
+        margin-left: 45px;
+    }
+    .header__content{
+        margin-top: 60px;
+        margin-left: 120px;
+    }
+    .puppy__flex{
+        flex-wrap: wrap;
+    }
+    .puppy__item{
+        width: 40%;
+    }
+    .puppy__item:nth-child(7){
+        display: none;
+    }
+    .puppy__item:nth-child(8){
+        display: none;
+    }
+    .footer__item{
+        width: 39%;
+        padding-bottom: 292px;
+        padding-right: 0;
+    }
+    .footer__item:nth-child(1){
+        padding-right: 38px;
+        padding-left: 35px;
+    }
+    .nav2{
+        margin-top: 42px;
+        margin-bottom: 52px;
+    }
+    .footer__flex{
+        flex-wrap: wrap;
+    }
+    .footer__puppy{
+        position: absolute;
+        width: 300px;
+        height: 310px;
+        left: calc(50% - 300px/2);
+        top: 375px;
+    }
+    .footer__flex {
+        margin-top: -6px;
+        padding-bottom: 42px;
+    }
+}
+@media(max-width: 320px){
+    .header__nav {
+        display: none;
+    }
+
+    .header__content {
+        margin-top: 36px;
+        margin-left: 22px;
+    }
+
+    .header__logo-1 {
+        font-size: 32px;
+        margin-left: -20px;
+        margin-top: 0;
+    }
+
+    .header__logo-2 {
+        font-size: 14px;
+        margin-left: -20px;
+        margin-top: 0;
+    }
+    /*our*/
+    .puppy__title{
+        font-size: 25px;
+        margin-top: -38px;
+        margin-left: -62px;
+    }
+    .puppy__item{
+        width: 100%;
+        margin-bottom: -4px;
+        margin-top: 33px;
+        margin-right: 54px;
+    }
+    .puppy__item:nth-child(4){
+        display: none;
+    }.puppy__item:nth-child(5){
+        display: none;
+    }.puppy__item:nth-child(6){
+        display: none;
+    }
+     .nav2{
+         margin-left: -77px;
+     }
+     .nav__item{
+         margin-left: 0;
+         padding: 9px 15px;
+         border-radius: 36px;
+     }
+     /*footer*/
+    .footer__title{
+        font-size: 27px;
+        margin-left: -11px;
+        margin-top: 0;
+        text-align: center;
+        width: 270px;
+    }
+    .footer__item{
+        width: 100%;
+    }
+    .footer__item:nth-child(1) {
+        padding-right: 38px;
+        margin-left: -33px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .footer__item:nth-child(2){
+        margin-top: -316px;
+        padding-bottom: 322px;
+    }
+    .footer__puppy{
+        background:url("img/img-320/footer-puppy.png") ;
+        width: 260px;
+        height: 269px;
+        position: absolute;
+        width: 260px;
+        height: 269px;
+        left: calc(50% - 260px/2);
+        top: 540px;
+    }
 }
