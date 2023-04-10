@@ -15,11 +15,14 @@
                     <a href="index.html" class="header__logo-1">Cozy House</a>
                     <a href="index.html" class="header__logo-2">Shelter for pets in Boston</a>
                 </div>
-                <div class="header__nav">
+                <div id="menu" class="header__nav">
                     <a href="index.html" class="nav ">About the shelter</a>
                     <a href="#" class="nav active">Our pets</a>
-                    <a href="#" class="nav">Help the shelter</a>
+                    <a href="index.html#help" class="nav">Help the shelter</a>
                     <a href="#footer" class="nav">Contacts</a>
+                </div>
+                <div id="burger" class="nav-toggle">
+                    <span class="nav-toggle__item"></span>
                 </div>
             </div>
         </div>
@@ -29,46 +32,75 @@
     <div class="container">
         <div class="center"><h3 class="puppy__title">Our friends who <br>
             are looking for a house</h3></div>
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <div class="pop__item">
+                        <div class="popup-image">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="pop__item">
+                        <h2 class="popup-title"></h2>
+                        <span onclick="hidePopup()" class="popup__close-btn">&times;</span>
+
+                        <div class="popup-body">
+                            <div class="popup-info">
+                                <div class="pop__type"><p><strong>Type:</strong> <span class="popup-type"></span></div>
+                                <p><strong>Breed:</strong> <span class="popup-breed"></span></p>
+                                <p><strong>Age:</strong> <span class="popup-age"></span></p>
+                                <p><strong>Inoculations:</strong> <span class="popup-inoculations"></span></p>
+                                <p><strong>Diseases:</strong> <span class="popup-diseases"></span></p>
+                                <p><strong>Parasites:</strong> <span class="popup-parasites"></span></p>
+                                <div class="popup-description">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="puppy__flex">
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-katrine.png" alt=""></div>
                 <div class="friend__text">Katrine</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(4)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-jennifer.png" alt=""></div>
                 <div class="friend__text">Jennifer</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(0)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-woody.png" alt=""></div>
                 <div class="friend__text">Woody</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(2)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-sophia.png" alt=""></div>
                 <div class="friend__text">Sophia</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(1)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-timmy.png" alt=""></div>
                 <div class="friend__text">Timmy</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(5)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-charly.png" alt=""></div>
                 <div class="friend__text">Charly</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(7)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
-                <div class="friend__img"><img src="img/pets-scarlet.png" alt=""></div>
+                <div class="friend__img"><img src="img/pets-scarlet12.png" alt=""></div>
                 <div class="friend__text">Scarlett</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(3)" class="btn-primary">Learn more</button></div>
             </div>
             <div class="puppy__item">
                 <div class="friend__img"><img src="img/pets-fred.png" alt=""></div>
                 <div class="friend__text">Freddie</div>
-                <div class="btn__friend"><button class="btn-primary">Learn more</button></div>
+                <div class="btn__friend"><button onclick="showPopup(6)" class="btn-primary">Learn more</button></div>
             </div>
         </div>
         <div class="nav2">
@@ -116,5 +148,6 @@
     </div>
     <div class="footer__puppy"></div>
 </footer>
+<script src="puppy.js"></script>
 </body>
 </html>

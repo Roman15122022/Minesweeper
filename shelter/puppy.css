@@ -87,7 +87,147 @@ header{
     margin-left: 35px;
     color: #545454;
 }
+/*pop*/
+.popup {
+    width: 900px!important;
+    height: 500px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+.popup-image{
+    padding-top: 100px;
+    margin-left: 50px;
+}
+.popup-header{
+    display: flex;
+}
+.pop__item{
+    width: 50%;
+}
+.popup__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
+.popup-title {
+    margin-top: 56px;
+    color: #333;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+}
+.pop__type{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+}
+.popup__close-btn {
+    position: absolute;
+    left: 98%;
+    top: -6%;
+    border: #FDDCC4 3px solid;
+    border-radius:50%;
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #999;
+}
+
+.popup__close-btn:hover {
+    color: #333;
+}
+
+.popup__content {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.popup__footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup__btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.popup__btn:hover {
+    background-color: #555;
+}
+
+/*toggle*/
+.nav-toggle{
+    margin-top: 30px;
+    margin-right: 5px;
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 101;
+    width: 30px;
+    padding: 15px 0;
+}
+.nav-toggle.active{
+    transform: rotate(90deg);
+    transition: all .3s linear;
+}
+.nav-toggle__item{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.nav-toggle__item:before,
+.nav-toggle__item:after{
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: #000000;
+}
+.nav-toggle__item:before{
+    top: -8px;
+}
+.nav-toggle__item:after{
+    bottom: -8px;
+}
 /*Header :hover*/
 .nav:after{
     display: block;
@@ -343,11 +483,47 @@ footer{
         padding-bottom: 42px;
     }
 }
+@media(max-width: 700px){
+    .header__nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 43%;
+        z-index: 100;
+        background-color: #292929;
+        height: 100vh;
+        width: 50%;
+
+    }
+    .nav-toggle{
+        display: block;
+    }
+
+}
 @media(max-width: 320px){
     .header__nav {
         display: none;
-    }
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: -45px;
+        z-index: 100;
+        background-color: #292929;
+        height: 808px;
+        width: 100%;
 
+    }
+    .nav:after{
+        width: 94%;
+    }
+    .nav{
+        font-size: 32px;
+        margin-top: 43px;
+        color: #F6F6F6;
+    }
     .header__content {
         margin-top: 36px;
         margin-left: 22px;
@@ -379,19 +555,19 @@ footer{
     .puppy__item:nth-child(4){
         display: none;
     }.puppy__item:nth-child(5){
-        display: none;
-    }.puppy__item:nth-child(6){
-        display: none;
+         display: none;
+     }.puppy__item:nth-child(6){
+          display: none;
+      }
+    .nav2{
+        margin-left: -77px;
     }
-     .nav2{
-         margin-left: -77px;
-     }
-     .nav__item{
-         margin-left: 0;
-         padding: 9px 15px;
-         border-radius: 36px;
-     }
-     /*footer*/
+    .nav__item{
+        margin-left: 0;
+        padding: 9px 15px;
+        border-radius: 36px;
+    }
+    /*footer*/
     .footer__title{
         font-size: 27px;
         margin-left: -11px;
