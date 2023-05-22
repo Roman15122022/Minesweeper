@@ -62,4 +62,8 @@
   transition: color 0.3s linear;
 }
 
+#countdown {
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

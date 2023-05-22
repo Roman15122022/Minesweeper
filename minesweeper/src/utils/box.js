@@ -16,8 +16,23 @@ function reset(){
 btn.addEventListener("click", reset);
 
 
-
 const appElem = document.getElementById("app");
+
+const time = document.createElement('div');
+time.id = 'countdown';
+time.innerHTML = '0 second';
+body.appendChild(time);
+function countdownReload() {
+    let reloadTime = 0; // Время в секундах до перезагрузки
+    const countdownElement = document.getElementById("countdown");
+
+    setInterval(function() {
+        reloadTime++;
+        countdownElement.innerText = reloadTime + " sec";
+    }, 1000);
+}
+window.onload = countdownReload;
+
 
 class Box {
     constructor(isBomb, coordinates) {
@@ -97,7 +112,8 @@ class Box {
             this.open();
         } else if (this.isBomb) {
             openAllBoxes();
-            alert("Game over. Try again");
+            alert(`Game over. Try again`);
+
         }
 
         this.showBoxValue();
