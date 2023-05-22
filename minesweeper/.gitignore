@@ -1,8 +1,0 @@
-.idea/
-node_modules/
-build/
-*.swp
-*.DS_Store
-.vscode
-
-npm-debug.log

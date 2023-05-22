@@ -1,5 +1,65 @@
-body {
-  background-color: blue;
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+  max-width: calc(50px * 10);
+  max-height: calc(50px * 10);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+#app .box {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .box.initial {
+  border: 5px gray outset;
+  cursor: pointer;
+}
+#app .box.bomb-count-1 {
+  color: blue;
+}
+#app .box.bomb-count-2 {
+  color: green;
+}
+#app .box.bomb-count-3 {
+  color: red;
+}
+#app .box.bomb-count-4 {
+  color: darkblue;
+}
+#app .box.bomb-count-5 {
+  color: brown;
+}
+#app .box.bomb-count-6 {
+  color: turquoise;
+}
+#app .box.bomb-count-7 {
+  color: black;
+}
+#app .box.bomb-count-8 {
+  color: white;
+}
+
+#btn {
+  display: block;
+  border: none;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #b6b3b3;
+}
+
+#btn:hover {
+  background-color: #d7d5d5;
+  transition: color 0.3s linear;
 }
 
 /*# sourceMappingURL=style.css.map */
